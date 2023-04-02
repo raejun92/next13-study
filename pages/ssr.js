@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Post({ posts }) {
   return (
     <div>
@@ -16,7 +14,7 @@ export default function Post({ posts }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await res.json();
 
